@@ -1,0 +1,31 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th>Cód.</th>
+        <th>Nombre</th>
+        <th>Asegurada</th>
+        <th>Prima</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row" *ngFor="let seguro of seguros">
+        <td>{{seguro.Codigo}}</td>
+        <td>{{seguro.Nombre}}</td>
+        <td>$ {{seguro.SumaAsegurada}}</td>
+        <td>$ {{seguro.Prima}}</td>
+        <td class="seguro-action">
+            <button mat-icon-button>
+                <img src="assets/icons/edit.png" 
+                     (click)="update(seguro)"
+                     alt="">
+            </button>
+            <button mat-icon-button>
+                <img src="assets/icons/delete.png" 
+                     (click)="delete(seguro)"
+                     alt="">
+            </button>
+        </td>
+      </tr>
+    </tbody>
+</table>

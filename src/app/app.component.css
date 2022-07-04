@@ -1,0 +1,52 @@
+/************************* Estilos de móvil ********************************/
+/*
+ * Contenedor
+*/
+
+.container{
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 1fr 60px;
+}
+ 
+
+
+
+/*
+* Menú móvil
+*/
+.menu-movil{
+    grid-row: 2;
+}
+
+
+
+
+
+/*
+* Menú de escritorio
+*/
+.menu-escritorio{
+    display: none;
+}
+
+ 
+
+/************************* Estilos de escritorio ********************************/
+@media (min-width: 900px) {
+    .container{
+        grid-template-rows: 1fr;
+        grid-template-columns: 60px 1fr;
+    }
+
+    .menu-movil{
+        display: none;
+    }
+
+
+    .menu-escritorio{
+        display: block;
+    }
+}
+

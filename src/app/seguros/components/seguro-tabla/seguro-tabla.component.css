@@ -1,0 +1,26 @@
+.table{
+    width: 100%;
+    max-width: 700px;
+}
+
+th{
+    text-align: left;
+    font-weight: 900;
+}
+
+.row{
+    border: 1px solid #dfdfdf;
+    border-radius: 5px;
+ 
+    margin-bottom: 2px;
+}
+
+button{
+    background-color: white;
+}
+
+.seguro-action{
+    display: flex;
+}
+
+

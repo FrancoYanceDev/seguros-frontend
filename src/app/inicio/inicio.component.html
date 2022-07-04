@@ -1,0 +1,40 @@
+<section class="container">
+    <section class="container-header">
+        <h1>Inicio</h1>
+    </section>
+    <section class="container-body">
+ 
+          <mat-stepper orientation="vertical" linear #stepper>
+
+            <mat-step>
+              <form >
+                <ng-template matStepLabel><strong>Tipo de consulta</strong></ng-template>
+
+
+                <mat-radio-group  class="tipo-de-consulta-container">
+                    <mat-radio-button color="primary" 
+                                      value="false"
+                                      (change)="Consultar('Asegurado')">Asegurado</mat-radio-button>
+                    <mat-radio-button color="primary"
+                                      value="false"
+                                      (change)="Consultar('Seguro')">Seguro</mat-radio-button>
+                </mat-radio-group>
+
+              </form>
+            </mat-step> 
+
+            
+            <mat-step>
+              <form>
+                <ng-template matStepLabel><strong>Consulta</strong></ng-template>
+                <div *ngIf="TipoDeConsulta !== ''">
+                    <app-asegurado-consulta *ngIf="TipoDeConsulta == 'Asegurado'"></app-asegurado-consulta>
+                    <app-seguro-consulta *ngIf="TipoDeConsulta == 'Seguro'"></app-seguro-consulta>
+                </div>
+
+              </form>
+            </mat-step>
+
+          </mat-stepper>
+    </section>
+</section>

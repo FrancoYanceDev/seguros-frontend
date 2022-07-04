@@ -1,0 +1,38 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th>Cédula</th>
+        <th>Nombre</th>
+        <th class="ocultar_campo">Teléfono</th>
+        <th class="ocultar_campo">Edad</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row" *ngFor="let asegurado of asegurados">
+        <td>{{asegurado.Cedula}}</td>
+        <td>{{asegurado.Nombre}}</td>
+        <td class="ocultar_campo">{{asegurado.Telefono}}</td>
+        <td class="ocultar_campo">{{asegurado.Edad}} años</td>
+        <td class="seguro-action">
+
+<!--             <button mat-icon-button>
+                <img src="assets/icons/seguros.png" 
+                     (click)="seguros(asegurado)"
+                     alt="">
+            </button> -->
+
+            <button mat-icon-button>
+                <img src="assets/icons/edit.png" 
+                     (click)="update(asegurado)"
+                     alt="">
+            </button>
+            <button mat-icon-button>
+                <img src="assets/icons/delete.png" 
+                     (click)="delete(asegurado)"
+                     alt="">
+            </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

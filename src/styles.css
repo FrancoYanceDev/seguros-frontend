@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+/*Estilos*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+
+/*
+ * Resetear estilos globales 
+*/
+
+* {
+      font-family: 'Poppins';  
+}
+
+/*Body*/
+body{
+    margin: 0px;
+
+}
+
+
+/* Listas */
+ul{
+    padding-left: 0px;
+    margin: 0px;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3{
+    margin-bottom: 0px;
+}
+html, body { height: 100%; }
+body { margin: 0;}
+
+
+
+/*Estilos reutilizables*/
+.btn-primary{
+    background-color: #063970;
+    color: white;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

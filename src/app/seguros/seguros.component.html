@@ -1,0 +1,15 @@
+<section class="container">
+    <section class="container-header">
+        <h1>Seguros</h1>
+    </section>
+    <section class="container-body">
+        <div class="container-action">
+            <button mat-flat-button
+                    (click)=" Create()"
+                    class="btn-primary">Crear seguro</button>
+        </div>
+        <div class="container-table">
+            <app-seguro-tabla [seguros]="seguros" (cargarSeguros)="cargarSeguros()"></app-seguro-tabla>
+        </div>
+    </section>
+</section>

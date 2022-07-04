@@ -1,0 +1,28 @@
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.body{
+    flex-grow: 1;
+    padding: 10px;
+}
+
+
+.input{
+    width: 100%;
+}
+
+
+
+
+.footer{
+    display: flex;
+    justify-content: flex-end;
+}

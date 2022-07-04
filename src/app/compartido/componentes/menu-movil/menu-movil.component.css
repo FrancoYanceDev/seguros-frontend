@@ -1,0 +1,41 @@
+/*
+*   Lista
+*/
+.container{ 
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 45px) 1fr;
+    grid-gap: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+ a{
+    width: 45px;
+    height: 45px;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border:1px solid rgba(214, 214, 214, 0.25);
+ }
+
+ .link-active{
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5.80328px;
+ }
+
+
+ .item-inicio{
+     grid-column: 2;
+ }
+
+ .item-seguros{
+    grid-column: 3;
+}
+
+.item-asegurados{
+    grid-column: 4;
+}

@@ -1,0 +1,65 @@
+<form>
+    <mat-form-field>
+        <mat-label>Código</mat-label>
+        <input matInput 
+               [formControl]="consultaForm"
+               autocomplete="off"
+               type="number"
+               (keyup)="BuscarAseguradoConEnter($event)">
+      </mat-form-field>
+
+      <button mat-mini-fab
+              class="btn-search">
+        <img src="assets/icons/search.png"
+             alt=""
+             (click)=" BuscarAsegurado()"
+             width="20"
+             height="20">
+      </button>
+
+      <div class="resultado" *ngIf="seguro">
+
+        <div class="datos-asegurado">
+            <h2>Datos del asegurado</h2>
+            <div class="dats-asegurado-tabla">
+                <p>
+                    <strong>Codigo:</strong>
+                    {{seguro.Codigo}}
+                </p>
+                <p>
+                    <strong>Nombre:</strong>
+                    {{seguro.Nombre}}
+                </p>
+                <p>
+                    <strong>Asegurado:</strong>
+                    {{seguro.SumaAsegurada}}
+                </p>
+                <p>
+                    <strong>Prima:</strong>
+                    {{seguro.Prima}}
+                </p>
+            </div>
+        </div>
+
+        <div class="datos-seguro" *ngIf="seguro">
+            <h2>Seguros</h2>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Teléfono</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="row" *ngFor="let asegurado of seguro.Asegurados">
+                    <td>{{asegurado.Asegurado.Nombre}}</td>
+                    <td>{{asegurado.Asegurado.Telefono}}</td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+
+      </div>
+
+</form>

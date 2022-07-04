@@ -1,0 +1,15 @@
+.btn-search{
+    background-color: white;
+    margin-left: 20px;
+}
+
+
+p{
+ display: grid;
+ grid-template-columns: 100px 1fr;   
+ padding-left: 10px;
+}
+th{
+    text-align: left;
+    font-weight: 900;
+}

@@ -1,0 +1,85 @@
+<section class="container">
+    <div class="header">
+        <h2>{{asegurado ? 'Editar Asegurado' : 'Nuevo Asegurado'}}</h2>
+    </div>
+
+    <div class="body">
+
+        <h3>Datos del asegurado</h3>
+        <form class="form"
+              [formGroup]="AseguradoForm">
+            <mat-form-field class="input">
+                <mat-label>Cédula</mat-label>
+                <input  matInput 
+                        type="text"
+                        maxlength="10"
+                        formControlName="Cedula"
+                        autocomplete="off">
+            </mat-form-field>
+            
+            
+            <mat-form-field class="input">
+                <mat-label>Nombre</mat-label>
+                <input  matInput 
+                        type="text"
+                        maxlength="100"
+                        formControlName="Nombre"
+                        autocomplete="off">
+            </mat-form-field>  
+
+            <mat-form-field class="input">
+                <mat-label>Teléfono</mat-label>
+                <input  matInput 
+                        type="text"
+                        maxlength="100"
+                        formControlName="Telefono"
+                        autocomplete="off">
+                    
+            </mat-form-field>             
+            
+            <mat-form-field class="input">
+                <mat-label>Edad</mat-label>
+                <input matInput 
+                       type="number"
+                       formControlName="Edad"
+                       autocomplete="off">
+            </mat-form-field>      
+            
+
+
+            <h3>Seguros</h3>
+
+            <ng-container formArrayName="Seguros">
+                <div *ngFor="let seguro of Seguros.controls; let i = index">
+                    <ng-container [formGroupName]="i">
+                         
+                        <p>
+                            <mat-checkbox
+                                color="primary"
+                                formControlName="Selected">
+                            </mat-checkbox>
+
+                            <strong class="nombre-seguro">{{seguro.get('nombre')?.value}}</strong>
+                        </p>
+
+
+                    </ng-container>
+                </div>
+
+            </ng-container>
+
+        </form>
+    </div>
+    <div class="footer">
+        <button mat-button 
+                (click)="close(false)"
+                color="warn">
+            Cancelar
+        </button>
+        <button mat-flat-button
+                (click)="Save()"
+                class="btn-primary">
+            Guardar
+        </button>
+    </div>
+</section>

@@ -1,0 +1,29 @@
+<section class="container">
+    <section class="container-header">
+        <h1>Asegurados</h1>
+    </section>
+    <section class="container-body">
+        <div class="container-action">
+            
+            <input type="file" 
+                   name="uploadFile"
+                   style="display: none;"
+                   [formControl]="uploadFile"
+                   accept=".xlsx"
+                   id="uploadFile"
+                   (change)="onChangeFile($event)">
+            <label for="uploadFile"
+                    style="margin-right: 20px;cursor: pointer;">
+                <img src="assets/icons/upload.png" alt="">
+            </label>
+
+
+            <button mat-flat-button
+                    (click)=" Create()"
+                    class="btn-primary">Crear asegurado</button>
+        </div>
+        <div class="container-table">
+            <app-asegurado-tabla [asegurados]="asegurados" (cargarSeguros)="cargarAsegurados()"></app-asegurado-tabla>
+        </div>
+    </section>
+</section>
